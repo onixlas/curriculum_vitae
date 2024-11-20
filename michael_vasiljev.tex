@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper, serif]{moderncv}
+
+\moderncvstyle{casual}
+\moderncvcolor{green}
+%\nopagenumbers{}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[indentfirst=true,forceheadingpunctuation=false]{russian}
+\setotherlanguages{english}
+
+%\usepackage[scale=0.9]{geometry}
+%\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to 
+
+\setmainfont{PT Serif}
+\setsansfont{PT Sans}
+\setmonofont{PT Mono}
+
+\name{Михаил}{Васильев}
+\title{Deep learning engineer}
+\born{25 апреля 1987}
+\phone[mobile]{+7~(916)~198~81~83}
+\email{gnu.xinm@gmail.com}
+\homepage{onixlas.github.io}
+
+\social[linkedin]{michael-vasiliev-a548422b7} 
+\social[github]{onixlas}
+\social[telegram]{LaHundo}
+
+\photo[64pt][0.4pt]{mvasiljev.jpg}
+
+\begin{document}
+\makecvtitle
+
+\section{Опыт}
+\cventry{2023—н.в.}{Старший специалист по машинному обучению}{Маквес Групп}{Москва}{}{Проект: создание комплексного решения для обеспечения безопасности в корпоративной сети на основе неструктурированных данных.\newline{}\newline{}
+Инструменты: python, transformers, EfficientNet, MobileNet, YOLO, PyOD, pandas, sklearn, pytorch, lightning, numpy, matplotlib, plotly, huggingface, onnx, fastapi, uvicorn, pyinstaller, pywin32, optimum, airflow, mlflow, cvat, natasha, deeppavlov, BERT, whisper, Ollama.\newline{}
+\begin{itemize}
+\item реализовал нейросетевой модуль для поиска нарушений закона о персональных данных, количество детектируемых классов увеличено с 14 до 36, accuracy top 1 увеличена до 98.9
+\item подготовил модуль для анализа содержимого отсканированных документов: поиск текста, таблиц, печатей, подписей и корпоративных бланков, количество классов увеличено с 5 до 19, mAP@.5 улучшен с .89 до .94
+\item реализовал поиск чувствительных данных в текстовых файлах, добавил модуль NER
+\item создал ансамбль алгоритмов для поиска аномалий на табличных данных, в том числе на временных рядах
+\item реализовал поиск чувствительных данных в аудио-файлах
+\item собрал и организовал разметку 8 датасетов для задач классификации и object detection
+\end{itemize}}
+
+\newpage
+
+\section{Пет-проекты}
+\cventry{2024—2024}{Тим-лид и технический эксперт}{CheckDocAI}{Москва}{}{Проект: Телеграм-бот с ИИ модулем для контроля качества оформления документов для ООО «Гольфстрим»\newline{}\newline{}
+Инструменты: aiogram, yolo, onnx, albumentations, cvat\newline{}
+\begin{itemize}
+\item руководил командой из двух дата-сайнтистов и бекенд-разработчика
+\item проект завершён и внедрён в коммерческую эксплуатацию
+\item ежемесячная экономия — 40 человеко-часов
+\end{itemize}}
+
+\section{Выступления}
+\cventry{25.06.2024}{Опыт обучения и применения нейросетей в качестве модуля российской DCAP системы}{Moscow Python Meetup}{Москва}{Компания Makves (входит в группу компаний «Гарда») разрабатывает российскую DCAP (data-centric audit and protection) систему для защиты корпоративных данных. Для анализа неструктурированных данных необходимо применять нейросети. В докладе я рассказал о проблемах, с которыми мы столкнулись при создании нейросетей, от этапа сбора и разметки данных и до создания нескольких микросервисов.}{}
+
+\section{Образование}
+\cventry{2024—2024}{Анализ данных на языке SQL}{УЦ «Специалист»}{Москва}{повышение квалификации}{}
+\cventry{2022—2023}{Computer Vision Engineer}{Deep Learning School ФПМИ МФТИ}{Москва}{профессиональная переподготовка}{}
+\cventry{2022—2022}{Специалист по Data Science}{Яндекс Практикум}{Москва}{профессиональная переподготовка}{}
+\cventry{2021—2022}{Введение в искусственный интеллект и нейросети для авиационных приложений}{МАИ}{Москва}{повышение квалификации}{}
+\cventry{2005—2008}{Перевод и переводоведение}{МАИ}{Москва}{специалитет}{}
+\cventry{2003—2009}{Авиационная и ракетно-космическая теплотехника}{МАИ}{Москва}{специалитет}{}
+
+\newpage
+
+\section{Языки}
+\cvskillentry{Русский}{5}{родной}{}{}
+\cvskillentry{Английский}{4}{В2}{}{}
+\cvskillentry{Немецкий}{4}{В2}{}{}
+\cvskillentry{Эсперанто}{4}{В2}{}{}
+
+\section{Навыки и технологии}
+\begin{cvcolumns}
+  \cvcolumn{}{
+  	\begin{itemize}
+  		\item Deep Learning
+  		\item NLP, NER
+  		\item Computer Vision
+  		\item Speech Recognition
+  		\item Machine learning
+  		\item Anomaly Detection
+  		\item Data analysis
+  		\item Data visualisation
+  		\item Statistics
+  	\end{itemize}}
+  \cvcolumn{}{
+  	\begin{itemize}
+  		\item Python
+  		\item SQL
+  		\item Linux
+  		\item Docker
+  		\item YOLO
+  		\item Natasha
+  		\item ONNX
+  		\item HuggingFace
+  		\item Ollama
+  		\item DeepPavlov
+  		\item AirFlow
+  		\item MLFlow
+  		\item CVAT
+  		\item Plotly
+  	\end{itemize}}
+  \cvcolumn{}{\begin{itemize}
+  		\item Pytorch
+  		\item Lightning
+  		\item Pandas
+  		\item NumPy
+  		\item Sklearn
+  		\item FastAPI
+  		\item uvicorn
+  		\item PyOD
+  		\item PySAD
+  		\item Optimum
+  		\item pywin32
+  		\item CatBoost
+  		\item XGBoost
+  		\item PostgreSQL
+  	\end{itemize}}
+\end{cvcolumns}
+\section{Сертификаты}
+\cvitem{Yandex}{Тренировки по ML}
+\cvitem{ФКН ВШЭ}{MLOps Bootcamp}
+\cvitem{Kaggle}{Feature Engineering}
+\cvitem{Kaggle}{Data Visualization}
+\end{document}
+
+
+%% end of file `template.tex'.
