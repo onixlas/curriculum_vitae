@@ -1,0 +1,153 @@
+\documentclass[11pt,a4paper, serif]{moderncv}
+
+\moderncvstyle{casual}
+\moderncvcolor{green}
+%\nopagenumbers{}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[]{english}
+\setotherlanguages{russian}
+
+\setmainfont{PT Serif}
+\setsansfont{PT Sans}
+\setmonofont{PT Mono}
+
+\name{Mikhail}{Vasiliev}
+\title{Deep Learning Engineer}
+\born{April 25, 1987}
+\phone[mobile]{+7~(916)~198~81~83}
+\email{gnu.xinm@gmail.com}
+\homepage{onixlas.github.io}
+
+\social[linkedin]{michael-vasiliev-ds} 
+\social[github]{onixlas}
+\social[telegram]{LaHundo}
+
+\photo[64pt][0.4pt]{mvasiljev.jpg}
+
+\begin{document}
+\makecvtitle
+
+\section{Experience}
+\cventry{2023—present}{Senior Machine Learning Specialist}{\href{https://makves.ru/}{Makves}}{}{}{
+Project: \textbf{Development and implementation of RAG system}\newline{}
+Tools: LangChain, Ollama, Saiga, GigaChat, Python, HuggingFace, PyTorch, FastAPI, Ragas\newline{}
+\begin{itemize}
+\item Developed and implemented a RAG system for automating customer request processing
+\item Optimized system hyperparameters using Ragas library and GigaChat LLM\newline{}
+\end{itemize}
+Project: \textbf{Creation of a comprehensive security solution for corporate networks based on unstructured data}\newline{}
+Tools: python, transformers, EfficientNet, MobileNet, YOLO, PIL, PyOD, pandas, sklearn, pytorch, lightning, numpy, matplotlib, plotly, huggingface, onnx, fastapi, uvicorn, pyinstaller, pywin32, optimum, airflow, mlflow, cvat, natasha\newline{}
+\begin{itemize}
+\item Implemented a neural network module for detecting violations of personal data laws, increasing detectable classes from 14 to 36 with top 1 accuracy reaching 98.9
+\item Developed a module for analyzing scanned document content: text, tables, stamps, signatures and corporate forms detection, increasing classes from 5 to 19 with mAP@.5 improved from .89 to .94
+\item Implemented sensitive data detection in text files with added NER module
+\item Created an ensemble of algorithms for anomaly detection in tabular data, including time series
+\item Developed sensitive data detection in audio files
+\item Collected and organized labeling for 8 datasets for classification and object detection tasks
+\end{itemize}
+}
+
+\newpage
+
+\section{Personal Projects}
+\cventry{2024}{Team Lead and Technical Expert}{\href{https://onixlas.github.io/projects/check_doc_ai/}{CheckDocAI}}{}{}{Project: Telegram bot with AI module for document quality control for \href{https://gulfstream.ru/}{Gulfstream LLC}, significantly reducing verification time and improving accuracy.\newline{}\newline{}
+Tools: aiogram, YOLO, ONNX, Albumentations, CVAT\newline{}
+\begin{itemize}
+\item Led a team of two data scientists and a backend developer, responsible for project development and implementation
+\item Successfully deployed for commercial use with monthly savings of 40 man-hours
+\end{itemize}}
+
+\section{Hackathons}
+\cventry{2024}{VK HSE Data Hack}{1st place}{}{}{Hackathon for news article classification into 21 categories. Our solution combined results from a small transformer-based classifier and LLM predictions\newline{}\newline{}
+Tools: transformers, Saiga3 8b, taiga dataset, streamlit\newline{}
+\begin{itemize}
+\item Enriched the dataset
+\item Selected zero-shot classification model
+\item Trained classifier model
+\item Coordinated team work
+\item Presented results
+\end{itemize}}
+
+\section{Talks}
+\cventry{24.04.2025}{\href{https://moscowpython.ru/meetup/101/iforest-pca/}{Anomaly Detection in Data: iForest and PCA Algorithms}}{Moscow Python Meetup №~101}{}{}{}
+\cventry{24.02.2025}{\href{https://onixlas.github.io/speeches/anomaly_hbos_ecod/}{Anomaly Detection in Data: HBOS and ECOD Algorithms}}{Moscow Python Meetup №~99}{}{}{}
+\cventry{29.01.2025}{\href{https://onixlas.github.io/speeches/work_nlp/}{NLP Neural Networks in Data Protection: Makves DCAP Experience}}{Moscow Python Meetup №~98}{}{}{}
+\cventry{25.06.2024}{\href{https://onixlas.github.io/speeches/work_cv/}{Training and Applying Neural Networks as a Module of Russian DCAP System}}{Moscow Python Meetup №~91}{}{}{}
+
+\newpage
+
+\section{Education}
+\cventry{2024}{Data Analysis with SQL}{Training Center "Specialist"}{}{professional development}{}
+\cventry{2022—2023}{Computer Vision Engineer}{Deep Learning School, MIPT}{}{professional retraining}{}
+\cventry{2022}{Data Science Specialist}{Yandex Practicum}{}{professional retraining}{}
+\cventry{2021—2022}{Introduction to AI and Neural Networks for Aviation Applications}{MAI}{}{professional development}{}
+\cventry{2005—2008}{Translation and Translation Studies}{MAI}{}{specialist degree}{}
+\cventry{2003—2009}{Aviation and Space Thermal Engineering}{MAI}{}{specialist degree}{}
+
+\section{Languages}
+\cvskillentry{Russian}{5}{native}{}{}
+\cvskillentry{English}{4}{B2}{}{}
+\cvskillentry{German}{4}{B2}{}{}
+\cvskillentry{Esperanto}{4}{B2}{}{}
+
+\section{Skills and Technologies}
+\begin{cvcolumns}
+  \cvcolumn{}{
+  	\begin{itemize}
+  		\item Deep Learning
+  		\item LLM, RAG
+  		\item NLP, NER
+  		\item Computer\\Vision
+  		\item Speech\\Recognition
+  		\item Machine\\learning
+  		\item Anomaly\\Detection
+  		\item Data analysis
+  		\item Data\\visualisation
+  		\item Statistics
+  	\end{itemize}}
+  \cvcolumn{}{
+  	\begin{itemize}
+  		\item Python
+  		\item SQL
+  		\item Linux
+  		\item Docker
+  		\item YOLO
+  		\item Natasha
+  		\item ONNX
+  		\item HuggingFace
+  		\item Ragas
+  		\item Ollama
+  		\item U-Net
+  		\item AirFlow
+  		\item MLFlow
+  		\item CVAT
+  		\item Plotly
+  	\end{itemize}}
+  \cvcolumn{}{\begin{itemize}
+  		\item Pytorch
+  		\item Lightning
+  		\item Pandas
+  		\item NumPy
+  		\item Sklearn
+  		\item FastAPI
+  		\item uvicorn
+  		\item PyOD
+  		\item PySAD
+  		\item Optimum
+  		\item pywin32
+  		\item CatBoost
+  		\item XGBoost
+  		\item PostgreSQL
+  		\item MySQL
+  	\end{itemize}}
+\end{cvcolumns}
+% \section{Certificates}
+% \cvitem{Yandex}{ML Training}
+% \cvitem{HSE Faculty of Computer Science}{MLOps Bootcamp}
+% \cvitem{Kaggle}{Feature Engineering}
+% \cvitem{Kaggle}{Data Visualization}
+\end{document}
+
+
+%% end of file `template.tex'.
