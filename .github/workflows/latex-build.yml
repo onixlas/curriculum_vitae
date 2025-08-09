@@ -1,0 +1,37 @@
+name: LaTeX Build and Lint
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup TeXLive and chktex
+        run: |
+          sudo apt-get install -y chktex texlive-xetex texlive-fonts-recommended texlive-latex-extra texlive-lang-cyrillic fonts-paratype
+
+      - name: Lint with chktex
+        run: |
+          chktex -n2 -n8 -n11 -n12 -n22 -n24 -n38 michael_vasiljev.tex || echo "Lint issues found in RU version (see logs)"
+          chktex -n2 -n8 -n11 -n12 -n22 -n24 -n38 michael_vasiljev_en.tex || echo "Lint issues found in EN version (see logs)"
+
+      - name: Compile PDFs
+        run: |
+          for file in michael_vasiljev michael_vasiljev_en; do
+            xelatex -interaction=nonstopmode -file-line-error -halt-on-error "$file.tex"
+            xelatex -interaction=nonstopmode -file-line-error -halt-on-error "$file.tex"
+          done
+
+      - name: Commit and Push PDFs
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add michael_vasiljev.pdf michael_vasiljev_en.pdf
+          git commit -m "Auto-update PDFs [skip ci]" || echo "No changes to commit"
+          git push origin main
