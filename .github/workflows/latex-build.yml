@@ -2,6 +2,8 @@ name: LaTeX Build and Lint
 on:
   push:
     branches: [main]
+    paths-ignore: 
+      - '**.pdf'
 
 jobs:
   lint-and-build:
@@ -10,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.CV_PAT }}
           persist-credentials: true
 
       - name: Setup TeXLive and chktex
@@ -33,5 +36,9 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add michael_vasiljev.pdf michael_vasiljev_en.pdf
-          git commit -m "Auto-update PDFs [skip ci]" || echo "No changes to commit"
-          git push origin main
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update PDFs [skip ci]"
+            git push origin main
+          fi
