@@ -1,11 +1,11 @@
-\documentclass[11pt,a4paper, serif]{moderncv}
+\documentclass[a4paper,sans,10pt]{moderncv}
 
 \moderncvcolor{green}
 \moderncvstyle{casual}
 %\nopagenumbers{}
 
 \usepackage{polyglossia}
-\setdefaultlanguage[indentfirst=true,forceheadingpunctuation=false]{russian}
+\setdefaultlanguage[]{russian}
 \setotherlanguages{english}
 
 \setmainfont{PT Serif}
@@ -13,7 +13,7 @@
 \setmonofont{PT Mono}
 
 \name{Михаил}{Васильев}
-\title{\textenglish{Deep learning engineer}}
+\title{Senior ML Engineer}
 \email{gnu.xinm@gmail.com}
 \homepage{onixlas.github.io}
 
@@ -21,128 +21,79 @@
 \social[github]{onixlas}
 \social[telegram]{LaHundo}
 
-\photo[64pt][0.4pt]{mvasiljev.jpg}
+%\photo[64pt][0.4pt]{mvasiljev.jpg}
 
 \begin{document}
 \makecvtitle
 
+\section{Summary}
+\cvitem{}{\textenglish{Senior ML Engineer} с опытом разработки и внедрения ML- и AI-решений в банковском и enterprise-сегменте. Имею опыт создания production-систем в областях \textenglish{LLM, NLP, Computer Vision, Anomaly Detection} и классического машинного обучения. Руководил ML-проектами от \textenglish{Discovery} и формирования требований до внедрения и оценки бизнес-эффекта, взаимодействовал с бизнес-заказчиками, разработчиками и топ-менеджментом.}
 \section{Опыт}
 \cventry{2025—н.в.}{Старший инженер по машинному обучению}{\href{https://www.raiffeisen.ru/}{Райффайзен Банк}}{}{}{}
-\cventry{2023—2025}{Старший специалист по машинному обучению}{\href{https://makves.ru/}{\textenglish{Mak\-ves}}}{}{}{}
-\cventry{}{}{}{}{}{Проект: \emph{разработка и внедрение RAG-системы}
-\begin{itemize}
-    \item Разработал и внедрил RAG-систему для автоматизации обработки запросов заказчиков
-    \item Оптимизировал гиперпараметры системы с использованием библиотеки \textenglish{Ragas} и языковой модели \textenglish{Giga\-Chat}
-\end{itemize}
-Инструменты: \textenglish{Lang\-Chain, Ollama, Saiga, Giga\-Chat, Hugging\-Face, FastAPI, Ragas}}
-\cventry{}{}{}{}{}{Проект: \emph{создание комплексного решения для обеспечения безопасности в корпоративной сети на основе неструктурированных данных}
-\begin{itemize}
-    \item Реализовал нейросетевой модуль для поиска нарушений закона о персональных данных, количество детектируемых классов увеличено с 14 до 36, \textenglish{accuracy top 1} увеличена до 98.9
-    \item Подготовил модуль для анализа содержимого отсканированных документов: поиск текста, таблиц, печатей, подписей и корпоративных бланков, количество классов увеличено с 5 до 19, mAP@.5 улучшен с .89 до .94
-    \item Реализовал поиск чувствительных данных в текстовых файлах, добавил модуль \textenglish{NER}
-    \item Создал ансамбль алгоритмов для поиска аномалий на табличных данных, в том числе на временных рядах
-    \item Собрал и организовал разметку 8 датасетов для задач классификации и \textenglish{object detection}
-\end{itemize}
-Инструменты: \textenglish{transformers, YOLO, PyOD, Pandas, Sklearn, PyTorch, lightning, NumPy, HuggingFace, ONNX, FastAPI, uvicorn, PyInstaller, optimum, CatBoost, CVAT, natasha}}
 
-\section{Пет-проекты}
-\cventry{2024}{Тим-лид и технический эксперт}{\href{https://onixlas.github.io/projects/check_doc_ai/}{CheckDocAI}}{}{}{Проект: \emph{Телеграм-бот с ИИ модулем для контроля качества оформления документов для \href{https://gulfstream.ru/}{ООО «Гольфстрим»}, позволяет значительно сократить время на проверку и улучшить точность}
-\begin{itemize}
-    \item Руководил командой из двух дата-сайентистов и бекенд-разработчика, отвечал за разработку и внедрение проекта
-    \item Проект успешно внедрён в коммерческую эксплуатацию, ежемесячная экономия~— 40~человеко-часов
-\end{itemize}
-Инструменты: \textenglish{aiogram, YOLO, ONNX, Albumentations, CVAT}}
+\cvitem{}{Проект: \emph{ML-сервис автоматического скоринга кандидатов}}
+\cvlistitem{Разработал \textenglish{production} ML-сервис автоматического скоринга кандидатов, обеспечив 100\% автоматизацию первичного отбора и сократив время обработки вакансий HR-командой на 30\% (экспертная оценка).}
+\cvlistitem{Построил пайплайн подготовки данных и \textenglish{Feature Engineering} для оценки соответствия пары «вакансия—кандидат»: выявил проблемы в исходных данных совместно с аналитиками, разработал 80+ признаков (46 вошли в финальную модель) и обучил \textenglish{CatBoost}  на выборке из 25 тысяч пар, достигнув \textenglish{F1-macro 0.81}.}
+\cvlistitem{Спроектировал безопасное внедрение модели через \textenglish{shadow mode}, согласовал с бизнесом критерии перехода к автоматической фильтрации кандидатов и внедрил интерпретируемые объяснения рекомендаций \textenglish{(SHAP + LLM)}, выбрав финальный формат совместно с HR по результатам пользовательской оценки.}
+\cvitem{}{Инструменты: \textenglish{CatBoost, SHAP, Qwen, Rabbit MQ, FastAPI}}
 
-\section{Хакатоны}
-\cventry{2024}{\textenglish{VK HSE Data Hack}}{1 место}{}{}{Хакатон по классификации новостных статей на 21 класс. В нашем решении комбинируются результаты работы небольшого классификатора на базе трансформерной архитектуры и предсказания \textenglish{LLM}
-\begin{itemize}
-    \item Обогатил датасет
-    \item Подобрал \textenglish{zero-shot classification} модель
-    \item Обучил модель-классификатор
-    \item Обеспечил координацию работы команды
-    \item Презентовал результаты
-\end{itemize}
-Инструменты: \textenglish{transformers, Saiga3 8b, taiga dataset, streamlit}
-}
+\cvitem{}{Проект: \emph{AI-ассистент для внутреннего финансового портала}}
+\cvlistitem{Инициировал внедрение AI-ассистента для внутреннего сервиса управления бюджетами и спроектировал двухэтапную архитектуру решения: RAG по документации и агентный слой с доступом к корпоративным данным.}
+\cvlistitem{Разработал и вывел в production RAG-систему по внутренней документации, сформировал совместно с бизнесом тестовый датасет и внедрил автоматизированную оценку качества на основе LLM-as-a-Judge.}
+\cvlistitem{Определил методологию тестирования agentic-сценариев и оценки корректности вызова 20+ корпоративных инструментов для персонализированных ответов пользователям.}
+\cvitem{}{Инструменты: \textenglish{Lang\-Chain, Ragas, LLM-as-a-Judge}}
+
+\cvitem{}{Проект: \emph{гибридная GenAI-система для внутреннего карьерного консультирования}}
+\cvlistitem{Выступил техническим лидером на этапе Discovery: провел 4 рабочих сессии с бизнес-стейкхолдерами, сформировал требования и спроектировал архитектуру AI-сервиса внутреннего карьерного консультирования.}
+\cvlistitem{Перепроектировал архитектуру сервиса, заменив генерацию для структурированных сценариев детерминированной логикой на основе модели из 10+ ролей, 100 компетенций и 15 карьерных переходов; сократил использование LLM примерно на 85\% пользовательских сценариев, сохранив генерацию только для обработки свободных вопросов}
+
+\cvitem{}{Проект: \emph{предиктивная аналитика психоэмоционального состояния сотрудников}}
+\cvlistitem{Руководил разработкой и внедрением ML-системы для анализа психоэмоционального состояния более 8000 сотрудников}
+\cvlistitem{Спроектировал архитектуру многоклассовой классификации для прогнозирования 8 показателей психоэмоционального состояния по 120+ поведенческим признакам; организовал сбор обучающей выборки из примерно 1500 размеченных анкет сотрудниокв из 110+ структурных подразделений}
+\cvlistitem{Реализовал XAI-подход через интеграцию SHAP и LLM для генерации интерпретируемых объяснений предсказаний, управлял разработкой решения и обеспечил переход проекта к стадии внедрения, защитив его перед топ-менеджментом банка}
+\cvitem{}{Инструменты: \textenglish{CatBoost, SHAP, Qwen}}
+
+\cventry{2023—2025}{Старший специалист по машинному обучению}{\href{https://makves.ru/}{\textenglish{Makves}}}{}{}{}
+
+\cvitem{}{Проект: \emph{развитие ML-подсистем коммерческой DCAP-платформы}}
+\cvlistitem{Отвечал за развитие ML-направления продукта: проектировал архитектуру, разрабатывал и выводил в production ML-сервисы, консультировал команду разработки по вопросам интеграции моделей. Разработанные сервисы разворачивались в инфраструктуре корпоративных заказчиков и обрабатывали более миллиона документов на типичной инсталляции.}
+\cvlistitem{Спроектировал архитектуру анализа документов, разделив обработку изображений и текста на независимые ML-сервисы. Инициировал сбор новых датасетов, согласовал состав поддерживаемых классов с продуктовой командой и организовал их разметку.}
+\cvlistitem{Разработал модуль анализа изображений документов: добавил этап object detection, увеличил количество поддерживаемых классов с 5 до 19, повысил mAP@0.5 с 0.89 до 0.94 и оптимизировал модель с помощью квантования для промышленной эксплуатации.}
+\cvlistitem{Разработал модуль анализа текстов: реализовал классификацию документов и извлечение чувствительных данных (NER), самостоятельно сформировал обучающий датасет, увеличил количество детектируемых классов персональных данных с 14 до 36 и достиг Top-1 Accuracy 98.9\%.}
+\cvlistitem{Подобрал и внедрил ансамбль алгоритмов поиска аномалий для табличных данных и временных рядов, а также разработал RAG-сервис по внутренней документации с датасетом для оценки качества, сформированным совместно с техническими писателями.}
+\cvitem{}{Инструменты: \textenglish{YOLO, PyOD, PyTorch Lightning, Hugging\-Face, ONNX, Fast\-API, optimum, Cat\-Boost, Lang\-Chain, Ollama, Ragas}}
+
+
+\section{Навыки и технологии}
+    \begin{english}
+        \cvitem{}{Machine Learning: Python, scikit-learn, Cat\-Boost, PyTorch, Feature Engineering, Model Evaluation, Explainability (SHAP)}
+        \cvitem{}{LLM \& AI Systems: RAG, Agentic AI, Prompt Engineering, Lang\-Chain, Qwen, Llama, Ollama, LLM-as-a-Judge, Ragas}
+        \cvitem{}{NLP \& Computer Vision: classification, NER, embeddings, transformers, YOLO, OpenCV}
+        \cvitem{}{Production ML: FastAPI, Docker, MLflow, ONNX, Linux, Git}
+        \cvitem{}{Data: SQL, PostgreSQL, pandas, NumPy}
+        \cvitem{}{ML Engineering: ML System Design, Technical Discovery, Experiment Design, Stakeholder Management}
+    \end{english}
+
 
 \section{Доклады}
 \cventry{2026}{Анатомия современных трансформеров}{\textenglish{Data Fest}}{}{}{}
 \cventry{2025}{\href{https://onixlas.github.io/talks/anomaly_phdays/}{Поиск аномалий с использованием \textenglish{Python}}}{\textenglish{Positive Hack Days}}{}{}{}
-% \cventry{2025}{\href{https://onixlas.github.io/talks/\#аномалии}{Серия докладов: Поиск аномалий в данных, алгоритмы}}{\textenglish{Moscow Python Meetup}}{}{}{}
-\cventry{2024—2025}{\href{https://onixlas.github.io/talks/\#makves}{\textenglish{NLP} и \textenglish{CV} нейросети в защите данных}}{\textenglish{Moscow Python Meetup}}{}{}{}
+\cventry{2024—2025}{\href{https://onixlas.github.io/talks/\#makves}{\textenglish{NLP} и \textenglish{CV} нейросети в защите данных: опыт \textenglish{Mak\-ves DCAP}}}{\textenglish{Moscow Python Meetup}}{}{}{}
 
-\newpage
+\section{Пет-проекты}
+\cventry{2024}{Тим-лид и технический эксперт}{\href{https://onixlas.github.io/projects/check_doc_ai/}{CheckDocAI}}{}{}{}
+\cvitem{}{Проект: \emph{Телеграм-бот с ИИ модулем для контроля качества оформления документов для \href{https://gulfstream.ru/}{ООО «Гольфстрим»}, позволяет значительно сократить время на проверку и улучшить точность}}
+\cvlistitem{Руководил командой из двух дата-сайентистов и бекенд-разработчика, отвечал за разработку и внедрение проекта}
+\cvlistitem{Проект успешно внедрён в коммерческую эксплуатацию, ежемесячная экономия~— 40~человеко-часов}
+\cvitem{}{Инструменты: \textenglish{aiogram, YOLO, ONNX, Albumentations, CVAT}}
 
 \section{Образование}
-\cventry{2024}{Анализ данных на языке \textenglish{SQL}}{УЦ «Специалист»}{}{повышение квалификации}{}
 \cventry{2022—2023}{\textenglish{Computer Vision Engineer}}{\textenglish{Deep Learning School} ФПМИ МФТИ}{}{профессиональная переподготовка}{}
 \cventry{2022}{Специалист по \textenglish{Data Science}}{Яндекс Практикум}{}{профессиональная переподготовка}{}
-\cventry{2021—2022}{Введение в искусственный интеллект и нейросети для авиационных приложений}{МАИ}{}{повышение квалификации}{}
-\cventry{2005—2008}{Перевод и переводоведение}{МАИ}{}{специалитет}{}
 \cventry{2003—2009}{Авиационная и ракетно-космическая теплотехника}{МАИ}{}{специалитет}{}
 
 \section{Языки}
-\cvskillentry{Русский}{5}{родной}{}{}
-\cvskillentry{Английский}{4}{В2}{}{}
-\cvskillentry{Немецкий}{4}{В2}{}{}
-\cvskillentry{Эсперанто}{4}{В2}{}{}
+    \cvskillentry{Русский}{5}{родной}{}{}
+    \cvskillentry{Английский}{4}{В2}{}{}
 
-\section{Навыки и технологии}
-    \begin{english}
-    	\begin{cvcolumns}
-            \cvcolumn{}{
-                \textbf{Deep Learning \& LLMs}
-                \begin{itemize}
-                    \item RAG, Prompt Engineering
-                    \item Qwen, Llama, GigaChat 
-                    \item LangChain, Ollama, Ragas
-                    \item Transformers, BERT
-                \end{itemize}
-                \textbf{Computer Vision}
-                \begin{itemize}
-                    \item YOLOv8, U-Net
-                    \item OpenCV, CVAT
-                    \item Albumentations
-                \end{itemize}
-                \textbf{Anomaly Detection}
-                \begin{itemize}
-                    \item PyOD, RRCF
-                    \item Isolation Forest, ECOD
-                    \item HBOS, PySAD
-                \end{itemize}
-                \textbf{NLP \& Speech}
-                \begin{itemize}
-                    \item NER (natasha)
-                    \item Whisper, HuBERT
-                    \item Text classification
-                \end{itemize}
-            }
-            
-            \cvcolumn{}{
-                \textbf{Vector Search}
-                \begin{itemize}
-                    \item FAISS, Qdrant, Milvus
-                    \item sentence-transformers
-                \end{itemize}
-                \textbf{MLOps \& Deployment}
-                \begin{itemize}
-                    \item Docker, Linux, FastAPI
-                    \item MLflow, Airflow
-                    \item ONNX, PyInstaller
-                \end{itemize}
-                \textbf{Testing \& Reproducibility}
-                \begin{itemize}
-                    \item pytest
-                    \item Git, CI/CD basics
-                    \item Experiment tracking
-                \end{itemize}
-                \textbf{Data \& Core ML}
-                \begin{itemize}
-                    \item Python, SQL, pandas
-                    \item scikit-learn, CatBoost
-                    \item PostgreSQL, MySQL
-                \end{itemize}
-            }
-        \end{cvcolumns}
-    \end{english}
 \end{document}
