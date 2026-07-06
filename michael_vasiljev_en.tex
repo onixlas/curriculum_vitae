@@ -1,19 +1,19 @@
-\documentclass[11pt,a4paper, serif]{moderncv}
+\documentclass[a4paper,sans,10pt]{moderncv}
 
 \moderncvcolor{green}
 \moderncvstyle{casual}
 %\nopagenumbers{}
 
 \usepackage{polyglossia}
-\setdefaultlanguage[]{english}
+\setdefaultlanguage{english}
 \setotherlanguages{russian}
 
 \setmainfont{PT Serif}
 \setsansfont{PT Sans}
 \setmonofont{PT Mono}
 
-\name{Mikhail}{Vasiliev}
-\title{Deep Learning Engineer}
+\name{Mikhail}{Vasilyev}
+\title{Senior ML Engineer}
 \email{gnu.xinm@gmail.com}
 \homepage{onixlas.github.io}
 
@@ -21,127 +21,76 @@
 \social[github]{onixlas}
 \social[telegram]{LaHundo}
 
-\photo[64pt][0.4pt]{mvasiljev.jpg}
+%\photo[64pt][0.4pt]{mvasiljev.jpg}
 
 \begin{document}
 \makecvtitle
 
+\section{Summary}
+\cvitem{}{Senior ML Engineer with experience in developing and deploying ML and AI solutions in the banking and enterprise sectors. Experienced in building production systems in LLM, NLP, Computer Vision, Anomaly Detection, and classical machine learning. Led ML projects from Discovery and requirements gathering to deployment and business impact assessment, collaborating with business stakeholders, developers, and top management.}
+
 \section{Experience}
-\cventry{2025—present}{Senior Machine Learning Engineer}{\href{https://www.raiffeisen.ru/}{Raiffeisenbank}}{}{}{}
-\cventry{2023—2025}{Senior Machine Learning Specialist}{\href{https://makves.ru/}{Mak\-ves}}{}{}{}
-\cventry{}{}{}{}{}{Project: \emph{Development and implementation of RAG system}
-\begin{itemize}
-\item Developed and implemented a RAG system for automating customer request processing
-\item Optimized system hyperparameters using Ragas library and GigaChat LLM
-\end{itemize}
-Tools: LangChain, Ollama, Saiga, Giga\-Chat, Hugging\-Face, Fast\-API, Ragas}
-\cventry{}{}{}{}{}{Project: \emph{Creation of a comprehensive security solution for corporate networks based on unstructured data}
-\begin{itemize}
-\item Implemented a neural network module for detecting violations of personal data laws, increasing detectable classes from 14 to 36 with top 1 accuracy reaching 98.9
-\item Developed a module for analyzing scanned document content: text, tables, stamps, signatures and corporate forms detection, increasing classes from 5 to 19 with mAP@.5 improved from .89 to .94
-\item Implemented sensitive data detection in text files with added NER module
-\item Created an ensemble of algorithms for anomaly detection in tabular data, including time series
-\item Developed sensitive data detection in audio files
-\item Collected and organized labeling for 8 datasets for classification and object detection tasks
-\end{itemize}
-Tools: transformers, YOLO, PyOD, Pandas, Sklearn, PyTorch, lightning, NumPy, HuggingFace, ONNX, FastAPI, uvicorn, PyInstaller, optimum, CatBoost, CVAT, natasha
-}
+\cventry{2025---Present}{Senior Machine Learning Engineer}{\href{https://www.raiffeisen.ru/}{Raiffeisen Bank}}{}{}{}
 
-\section{Personal Projects}
-\cventry{2024}{Team Lead and Technical Expert}{\href{https://onixlas.github.io/projects/check_doc_ai/}{CheckDocAI}}{}{}{Project: \emph{Telegram bot with AI module for document quality control for \href{https://gulfstream.ru/}{Gulfstream LLC}, significantly reducing verification time and improving accuracy}
-\begin{itemize}
-\item Led a team of two data scientists and a backend developer, responsible for project development and implementation
-\item Successfully deployed for commercial use with monthly savings of 40 man-hours
-\end{itemize}
-Tools: aiogram, YOLO, ONNX, Albumentations, CVAT}
+\cvitem{}{Project: \emph{Automated Candidate Scoring ML Service}}
+\cvlistitem{Developed a production ML service for automated candidate scoring, achieving 100\% automation of initial screening and reducing the HR team's vacancy processing time by 30\% (expert estimate).}
+\cvlistitem{Built a data preparation pipeline and Feature Engineering process to evaluate the match between a ``vacancy--candidate'' pair: identified issues in the source data together with analysts, developed 80+ features (46 made it into the final model), and trained CatBoost on a sample of 25 thousand pairs, achieving an F1-macro of 0.81.}
+\cvlistitem{Designed a secure model deployment via shadow mode, agreed with the business on the criteria for transitioning to automated candidate filtering, and implemented interpretable explanations for recommendations (SHAP + LLM), selecting the final format jointly with HR based on user evaluation results.}
+\cvitem{}{Tools: CatBoost, SHAP, Qwen, Rabbit MQ, FastAPI}
 
-\section{Hackathons}
-\cventry{2024}{VK HSE Data Hack}{1st place}{}{}{Hackathon for news article classification into 21 categories. Our solution combined results from a small transformer-based classifier and LLM predictions
-\begin{itemize}
-\item Enriched the dataset
-\item Selected zero-shot classification model
-\item Trained classifier model
-\item Coordinated team work
-\item Presented results
-\end{itemize}
-Tools: transformers, Saiga3 8b, taiga dataset, streamlit}
+\cvitem{}{Project: \emph{AI Assistant for Internal Financial Portal}}
+\cvlistitem{Initiated the implementation of an AI assistant for the internal budget management service and designed a two-stage solution architecture: RAG for documentation and an agentic layer with access to corporate data.}
+\cvlistitem{Developed and deployed a RAG system for internal documentation to production, created a test dataset jointly with the business, and implemented automated quality evaluation based on LLM-as-a-Judge.}
+\cvlistitem{Defined the testing methodology for agentic scenarios and evaluated the correctness of calling 20+ corporate tools for personalized user responses.}
+\cvitem{}{Tools: LangChain, Ragas, LLM-as-a-Judge}
+
+\cvitem{}{Project: \emph{Hybrid GenAI System for Internal Career Consulting}}
+\cvlistitem{Acted as the technical leader during the Discovery phase: conducted 4 working sessions with business stakeholders, gathered requirements, and designed the architecture for the internal career consulting AI service.}
+\cvlistitem{Redesigned the service architecture by replacing generation for structured scenarios with deterministic logic based on a model of 10+ roles, 100 competencies, and 15 career transitions; reduced LLM usage for approximately 85\% of user scenarios, keeping generation only for handling free-form questions.}
+
+\cvitem{}{Project: \emph{Predictive Analytics of Employees' Psycho-Emotional State}}
+\cvlistitem{Led the development and deployment of an ML system for analyzing the psycho-emotional state of over 8,000 employees.}
+\cvlistitem{Designed a multi-class classification architecture to predict 8 psycho-emotional state indicators based on 120+ behavioral features; organized the collection of a training sample of approximately 1,500 labeled employee surveys from 110+ structural units.}
+\cvlistitem{Implemented an XAI approach by integrating SHAP and LLM to generate interpretable explanations of predictions, managed the solution development, and ensured the project transitioned to the deployment stage by defending it before the bank's top management.}
+\cvitem{}{Tools: CatBoost, SHAP, Qwen}
+
+\cventry{2023---2025}{Senior Machine Learning Specialist}{\href{https://makves.ru/}{Makves}}{}{}{}
+
+\cvitem{}{Project: \emph{Development of ML Subsystems for a Commercial DCAP Platform}}
+\cvlistitem{Led the ML development for the product: designed the architecture, developed and deployed ML services to production, and consulted the development team on model integration issues. The developed services were deployed in corporate clients' infrastructure and processed over a million documents in a typical installation.}
+\cvlistitem{Designed the document analysis architecture by separating image and text processing into independent ML services. Initiated the collection of new datasets, agreed on the composition of supported classes with the product team, and organized their labeling.}
+\cvlistitem{Developed the document image analysis module: added an object detection stage, increased the number of supported classes from 5 to 19, improved mAP@0.5 from 0.89 to 0.94, and optimized the model using quantization for production use.}
+\cvlistitem{Developed the text analysis module: implemented document classification and sensitive data extraction (NER), independently created a training dataset, increased the number of detectable personal data classes from 14 to 36, and achieved a Top-1 Accuracy of 98.9\%.}
+\cvlistitem{Selected and implemented an ensemble of anomaly detection algorithms for tabular data and time series, and developed a RAG service for internal documentation with a quality evaluation dataset created jointly with technical writers.}
+\cvitem{}{Tools: YOLO, PyOD, PyTorch Lightning, HuggingFace, ONNX, FastAPI, optimum, CatBoost, LangChain, Ollama, Ragas}
+
+\section{Skills and Technologies}
+    \cvitem{}{Machine Learning: Python, scikit-learn, CatBoost, PyTorch, Feature Engineering, Model Evaluation, Explainability (SHAP)}
+    \cvitem{}{LLM \& AI Systems: RAG, Agentic AI, Prompt Engineering, LangChain, Qwen, Llama, Ollama, LLM-as-a-Judge, Ragas}
+    \cvitem{}{NLP \& Computer Vision: classification, NER, embeddings, transformers, YOLO, OpenCV}
+    \cvitem{}{Production ML: FastAPI, Docker, MLflow, ONNX, Linux, Git}
+    \cvitem{}{Data: SQL, PostgreSQL, pandas, NumPy}
+    \cvitem{}{ML Engineering: ML System Design, Technical Discovery, Experiment Design, Stakeholder Management}
 
 \section{Talks}
 \cventry{2026}{Anatomy of Modern Transformers}{Data Fest}{}{}{}
-\cventry{2025}{\href{https://onixlas.github.io/talks/anomaly_phdays/}{Anomaly Detection with Python}}{Positive Hack Days}{}{}{}
-% \cventry{2025}{\href{https://onixlas.github.io/talks/\#аномалии}{Lecture Series: Anomaly Detection in Data, Algorithms}}{Moscow Python Meetup}{}{}{}
-\cventry{2024—2025}{\href{https://onixlas.github.io/talks/\#makves}{NLP and CV Neural Networks in Data Protection}}{Moscow Python Meetup}{}{}{}
+\cventry{2025}{\href{https://onixlas.github.io/talks/anomaly_phdays/}{Anomaly Detection using Python}}{Positive Hack Days}{}{}{}
+\cventry{2024---2025}{\href{https://onixlas.github.io/talks/\#makves}{NLP and CV Neural Networks in Data Protection: Makves DCAP Experience}}{Moscow Python Meetup}{}{}{}
 
-\newpage
+\section{Pet Projects}
+\cventry{2024}{Team Lead and Technical Expert}{\href{https://onixlas.github.io/projects/check_doc_ai/}{CheckDocAI}}{}{}{}
+\cvitem{}{Project: \emph{Telegram bot with an AI module for controlling the quality of document formatting for Gulfstream LLC, allowing to significantly reduce verification time and improve accuracy}}
+\cvlistitem{Led a team of two data scientists and a backend developer, and was responsible for the development and deployment of the project.}
+\cvlistitem{The project was successfully deployed for commercial use, with a monthly savings of 40 man-hours.}
+\cvitem{}{Tools: aiogram, YOLO, ONNX, Albumentations, CVAT}
 
 \section{Education}
-\cventry{2024}{Data Analysis with SQL}{Training Center ``Specialist''}{}{professional development}{}
-\cventry{2022—2023}{Computer Vision Engineer}{Deep Learning School, MIPT}{}{professional retraining}{}
-\cventry{2022}{Data Science Specialist}{Yandex Practicum}{}{professional retraining}{}
-\cventry{2021—2022}{Introduction to AI and Neural Networks for Aviation Applications}{MAI}{}{professional development}{}
-\cventry{2005—2008}{Translation and Translation Studies}{MAI}{}{specialist degree}{}
-\cventry{2003—2009}{Aviation and Space Thermal Engineering}{MAI}{}{specialist degree}{}
+\cventry{2022---2023}{Computer Vision Engineer}{Deep Learning School at MIPT FPMI}{}{Professional Retraining Program}{}
+\cventry{2022}{Data Science Specialist}{Yandex Practicum}{}{Professional Retraining Program}{}
+\cventry{2003---2009}{Aviation and Rocket-Space Thermal Engineering}{Moscow Aviation Institute (MAI)}{}{Specialist Degree}{}
 
 \section{Languages}
-\cvskillentry{Russian}{5}{native}{}{}
-\cvskillentry{English}{4}{B2}{}{}
-\cvskillentry{German}{4}{B2}{}{}
-\cvskillentry{Esperanto}{4}{B2}{}{}
+    \cvskillentry{Russian}{5}{Native}{}{}
+    \cvskillentry{English}{4}{B2 (Upper-Intermediate)}{}{}
 
-\section{Skills and Technologies}
-    \begin{cvcolumns}
-        \cvcolumn{}{
-            \textbf{Deep Learning \& LLMs}
-            \begin{itemize}
-                \item RAG, Prompt Engineering
-                \item Qwen, Llama, GigaChat 
-                \item LangChain, Ollama, Ragas
-                \item Transformers, BERT
-            \end{itemize}
-            \textbf{Computer Vision}
-            \begin{itemize}
-                \item YOLOv8, U-Net
-                \item OpenCV, CVAT
-                \item Albumentations
-            \end{itemize}
-            \textbf{Anomaly Detection}
-            \begin{itemize}
-                \item PyOD, RRCF
-                \item Isolation Forest, ECOD
-                \item HBOS, PySAD
-            \end{itemize}
-            \textbf{NLP \& Speech}
-            \begin{itemize}
-                \item NER (natasha)
-                \item Whisper, HuBERT
-                \item Text classification
-            \end{itemize}
-        }
-        
-        \cvcolumn{}{
-            \textbf{Vector Search}
-            \begin{itemize}
-                \item FAISS, Qdrant, Milvus
-                \item sentence-transformers
-            \end{itemize}
-            \textbf{MLOps \& Deployment}
-            \begin{itemize}
-                \item Docker, Linux, FastAPI
-                \item MLflow, Airflow
-                \item ONNX, PyInstaller
-            \end{itemize}
-            \textbf{Testing \& Reproducibility}
-            \begin{itemize}
-                \item pytest
-                \item Git, CI/CD basics
-                \item Experiment tracking
-            \end{itemize}
-            \textbf{Data \& Core ML}
-            \begin{itemize}
-                \item Python, SQL, pandas
-                \item scikit-learn, CatBoost
-                \item PostgreSQL, MySQL
-            \end{itemize}
-        }
-    \end{cvcolumns}
 \end{document}
